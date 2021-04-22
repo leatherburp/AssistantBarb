@@ -1,4 +1,5 @@
 ﻿using System;
+using static System.Console;
 
 namespace AssistantBarb
 {
@@ -6,7 +7,8 @@ namespace AssistantBarb
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Game currentGame = new Game();
+            currentGame.Run();
         }
     }
 }
