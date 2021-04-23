@@ -62,7 +62,7 @@ namespace AssistantBarb
         private string IntroText = @"Location: Nebraska
 Time: April 5, 2012, 3:34 PM
 
-You're Jules. A devoted fan of Nicki Minaj, most commonly known as a Barb. You'd love to work for her as a personal assistant, so you too a risk and emailed her managent team.";
+You're Jules. A devoted fan of Nicki Minaj, most commonly known as a Barb. You'd love to work for her as a personal assistant, so you too a risk and emailed her management team.";
         private string EmailFile = "email.txt";
         private string DenyEmail = @"Dear Mr. Azoff,
 
@@ -255,7 +255,8 @@ Welcome to the game, Barbz! Where would you like to go?
                 Clear();
             }
 
-            TextAnimationUtils.AnimateTyping("You give Nicki her items...");
+            TextAnimationUtils.AnimateTyping("You give Nicki her drink...");
+            ReadKey(true);
 
             if(CurrentPlayer.Slot1 == RedSlurpee)
             {
@@ -500,7 +501,7 @@ Welcome to the game, Barbz! Where would you like to go?
                     TextAnimationUtils.AnimateTyping("You order a pink drink and start to head back to Nicki.");
                     CurrentPlayer.PickUpDrink(PinkDrink);
                     ForegroundColor = ConsoleColor.White;
-                    WriteLine("\n\nPress ENTER to go back to Nicki...");
+                    WriteLine("\n\nPress ENTER to leave Starbucks...");
                     ReadKey(true);
                     return;
                 case 1:
@@ -509,7 +510,7 @@ Welcome to the game, Barbz! Where would you like to go?
                     TextAnimationUtils.AnimateTyping("You order an iced coffee and start to head back to Nicki.");
                     CurrentPlayer.PickUpDrink(IcedCoffee);
                     ForegroundColor = ConsoleColor.White;
-                    WriteLine("\n\nPress ENTER to go back to Nicki...");
+                    WriteLine("\n\nPress ENTER to leave Starbucks...");
                     ReadKey(true);
                     return;
             }
@@ -530,18 +531,18 @@ Welcome to the game, Barbz! Where would you like to go?
                     TextAnimationUtils.AnimateTyping("You get a red Slurpee and start to head back to Nicki.");
                     CurrentPlayer.PickUpDrink(RedSlurpee);
                     ForegroundColor = ConsoleColor.White;
-                    WriteLine("\n\nPress ENTER to go back to Nicki...");
+                    WriteLine("\n\nPress ENTER to leave the store...");
                     ReadKey(true);
-                    return;
+                    break;
                 case 1:
                     Clear();
                     ForegroundColor = ConsoleColor.DarkCyan;
                     TextAnimationUtils.AnimateTyping("You pick a Monster Energy Drink and start to head back to Nicki.");
                     CurrentPlayer.PickUpDrink(MonsterEnergy);
                     ForegroundColor = ConsoleColor.White;
-                    WriteLine("\n\nPress ENTER to go back to Nicki...");
+                    WriteLine("\n\nPress ENTER to leave the store...");
                     ReadKey(true);
-                    return;
+                    break;
             }
         }
 
