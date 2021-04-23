@@ -236,6 +236,9 @@ Welcome to the game, Barbz! Where would you like to go?
             Clear();
             TextAnimationUtils.AnimateTyping($"You arrive at the wig store.");
 
+            WigStorePrompt();
+
+            Clear();
             TextAnimationUtils.AnimateTyping("You get back to Nicki's Mansion.");
             WriteLine("\n\nPress ENTER to go to Nicki...");
             ReadKey(true);
@@ -282,6 +285,28 @@ Welcome to the game, Barbz! Where would you like to go?
                 WriteLine("\n\nPress ENTER to keep working...");
                 ReadKey(true);
             }
+
+            Clear();
+            TextAnimationUtils.AnimateTyping("You give Nicki her wig...");
+            ReadKey(true);
+
+            if (CurrentPlayer.Slot2 == PinkWig)
+            {
+                Succeed("\n\n\"A pink wig? This is so cute!! You really know me! Nice job!\"");
+            }
+            else if (CurrentPlayer.Slot2 == BaldCap)
+            {
+                Fail("\n\n\"What is this? This better be a joke. Don't ever do that again.\"", "\n\n\"What the hell? THis is a bald cap! Get out of here! You're fired!\"");
+            }
+            else if (CurrentPlayer.Slot2 == BlackWig)
+            {
+                ForegroundColor = ConsoleColor.Magenta;
+                TextAnimationUtils.AnimateTyping("\n\n\"This is cute... Not my color, but I like it. Thank you.\"");
+                ForegroundColor = ConsoleColor.White;
+                WriteLine("Press ENTER to keep working...");
+                ReadKey(true);
+            }
+
 
             Clear();
             ForegroundColor = ConsoleColor.Magenta;
@@ -384,6 +409,46 @@ Welcome to the game, Barbz! Where would you like to go?
                     LosePrompt();
                     break;
             }
+        }
+
+        private void WigStorePrompt()
+        {
+            string prompt = "Which wig do you buy?";
+            string[] options = { "Black Wig", "Pink Bob Wig", "Baldcap" };
+            Menu wigStorePrompt = new Menu(prompt, options, ArtAssets.WigOptionsArt);
+            int selectedIndex = wigStorePrompt.Run();
+
+            switch (selectedIndex)
+            {
+                case 0:
+                    Clear();
+                    ForegroundColor = ConsoleColor.DarkCyan;
+                    TextAnimationUtils.AnimateTyping("You get the black wig and start to head back to Nicki.");
+                    CurrentPlayer.PickUpWig(BlackWig);
+                    ForegroundColor = ConsoleColor.White;
+                    WriteLine("\n\nPress ENTER to leave the store...");
+                    ReadKey(true);
+                    break;
+                case 1:
+                    Clear();
+                    ForegroundColor = ConsoleColor.DarkCyan;
+                    TextAnimationUtils.AnimateTyping("You get the pink wig and start to head back to Nicki.");
+                    CurrentPlayer.PickUpWig(PinkWig);
+                    ForegroundColor = ConsoleColor.White;
+                    WriteLine("\n\nPress ENTER to leave the store...");
+                    ReadKey(true);
+                    break;
+                case 2:
+                    Clear();
+                    ForegroundColor = ConsoleColor.DarkCyan;
+                    TextAnimationUtils.AnimateTyping("You get the baldcap and start to head back to Nicki.");
+                    CurrentPlayer.PickUpWig(BaldCap);
+                    ForegroundColor = ConsoleColor.White;
+                    WriteLine("\n\nPress ENTER to leave the store...");
+                    ReadKey(true);
+                    break;
+            }
+
         }
 
         private void HovLanePrompt()
