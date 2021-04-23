@@ -10,6 +10,9 @@ namespace AssistantBarb
         Item PinkDrink = new Item("Pink Drink", 2, ArtAssets.PinkDrinkArt, ConsoleColor.Magenta);
         Item MonsterEnergy = new Item("Monster Energy Drink", 0, ArtAssets.MonsterEnergyArt, ConsoleColor.Green);
         Item IcedCoffee = new Item("Iced Coffee", 1, ArtAssets.IcedCoffeeArt, ConsoleColor.DarkYellow);
+        Item PinkWig = new Item("Pink Wig", 2, ArtAssets.BobArt, ConsoleColor.Magenta);
+        Item BlackWig = new Item("Black Wig", 1, ArtAssets.BlackWigArt, ConsoleColor.Gray);
+        Item BaldCap = new Item("Baldcap", 0, ArtAssets.BaldCapArt, ConsoleColor.DarkYellow);
         Player CurrentPlayer = new Player(24, 4);
         Location Starbucks = new Location("Starbucks");
         Location ConStore = new Location("convienence store");
