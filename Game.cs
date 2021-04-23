@@ -241,7 +241,7 @@ Welcome to the game, Barbz! Where would you like to go?
                 ForegroundColor = ConsoleColor.Magenta;
                 TextAnimationUtils.AnimateTyping("\n\n\"Ooh a Slurpee? A safe choice. Thank you.\"");
                 ForegroundColor = ConsoleColor.White;
-                WriteLine("Press ENTER to keep working...");
+                WriteLine("\n\nPress ENTER to keep working...");
                 ReadKey(true);
             }
             else if (CurrentPlayer.Slot1 == MonsterEnergy)
@@ -257,7 +257,7 @@ Welcome to the game, Barbz! Where would you like to go?
                 ForegroundColor = ConsoleColor.Magenta;
                 TextAnimationUtils.AnimateTyping("\n\n\"An iced coffee? A safe choice. Thank you.\"");
                 ForegroundColor = ConsoleColor.White;
-                WriteLine("Press ENTER to keep working...");
+                WriteLine("\n\nPress ENTER to keep working...");
                 ReadKey(true);
             }
 
@@ -421,7 +421,7 @@ Welcome to the game, Barbz! Where would you like to go?
                 ForegroundColor = ConsoleColor.White;
                 WriteLine("\n\nPress ENTER to answer...");
                 ReadKey(true);
-                Fail("\"You got pulled over!? Well at least you were trying to get back quickly. Don't you ever do this again!\"", "\"You got pulled over?! Hell no... Get back now! You're fired!\"");
+                Fail("\"You got pulled over!? Well at least you were trying to go places quickly. Don't you ever do this again!\"", "\"You got pulled over?! Hell no... Get back now! You're fired!\"");
             }
             TextAnimationUtils.CarAnimation(3);
         }
