@@ -213,7 +213,7 @@ Welcome to the game, Barbz! Where would you like to go?
 
             Clear();
             ForegroundColor = ConsoleColor.Green;
-            TextAnimationUtils.Blink($"{ArtAssets.TextArt}\n      *** 1 NEW TEXT MESSAGE ***", 3);
+            TextAnimationUtils.Blink($"{ArtAssets.TextArt}\n*** 1 NEW TEXT MESSAGE ***", 3);
             ForegroundColor = ConsoleColor.White;
             WriteLine("\n\nPress ENTER to open...");
             ReadKey(true);
@@ -233,7 +233,8 @@ Welcome to the game, Barbz! Where would you like to go?
             TextAnimationUtils.AnimateTyping("There's lots of traffic on the highway. You see that ther's a carpool lane to your left that is moving quickly. You don't want to keep Nicki waiting.");
             HovLanePrompt();
 
-
+            Clear();
+            TextAnimationUtils.AnimateTyping($"You arrive at the wig store.");
 
             TextAnimationUtils.AnimateTyping("You get back to Nicki's Mansion.");
             WriteLine("\n\nPress ENTER to go to Nicki...");
