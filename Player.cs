@@ -49,6 +49,11 @@ namespace AssistantBarb
             Slot2 = wig;
         }
 
+        public void Promote(Item promotion)
+        {
+            Slot3 = promotion;
+        }
+
        public void SetLocation(Location place)
         {
             Destination = place;

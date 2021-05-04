@@ -311,6 +311,11 @@ Welcome to the game, Barbz! Where would you like to go?
                 ReadKey(true);
             }
 
+            Clear();
+            ForegroundColor = ConsoleColor.Magenta;
+            TextAnimationUtils.AnimateTyping("\"Thank you for the items. There's one last thing I need from you today. Can you get on my Twitter and promote the concert for me? We're so close to selling out!\"");
+            ForegroundColor = ConsoleColor.White;
+            PromotionPrompt();
 
             Clear();
             ForegroundColor = ConsoleColor.Magenta;
@@ -376,6 +381,70 @@ Welcome to the game, Barbz! Where would you like to go?
         {
             ConsoleUtils.Exit();
             Environment.Exit(0);
+        }
+
+        private void PromotionPrompt()
+        {
+            string prompt = "\nHow are you going to promote the concert?";
+            string[] options = { "Start beef with a hater", "Make a series of funny Tweets", "Start a giveaway for signed CD copies", "Don't do anything" };
+            Menu promotionPrompt = new Menu(prompt, options, "\"Thank you for the items. There's one last thing I need from you today. Can you get on my Twitter and promote the concert for me? We're so close to selling out!\"");
+            int selectedIndex = promotionPrompt.Run();
+
+            switch (selectedIndex)
+            {
+                case 0:
+                    Clear();
+                    TextAnimationUtils.AnimateTyping("You start beef with a hater...");
+                    WriteLine("\n\nPress any keys to start writing.");
+                    ForegroundColor = ConsoleColor.Cyan;
+                    TextAnimationUtils.UserTypingAnimation("i cant stand u haters in my mentions any more... u miserable ppl refuse to move on w/ your lives. come to my concert if ur so obsessed w/ me.");
+                    ForegroundColor = ConsoleColor.White;
+                    WriteLine("\n\nPress ENTER to send tweet...");
+                    ReadKey(true);
+                    Clear();
+                    TextAnimationUtils.AnimateTyping("Well... that didnt go to plan... #NickiMinajIsCanceled is the #1 trending hashtag on Twitter. Nicki doesn't seem too happy...");
+                    WriteLine("\n\nPress ENTER to talk to her...");
+                    ReadKey(true);
+                    Fail("You seriously got THAT trending? You better be lucky my fans are dedicated and aren't canceling their tickets. Don't mess up like that again!", "You seriously got THAT trending???? Get out of my house right now! You're fired!");
+                    break;
+                case 1:
+                    Clear();
+                    TextAnimationUtils.AnimateTyping("You make a funny tweet...");
+                    WriteLine("\n\nPress any keys to start writing.");
+                    ForegroundColor = ConsoleColor.Cyan;
+                    TextAnimationUtils.UserTypingAnimation("cawling all barbs, cawling all barbs. report to the conference room right now... come to my concert! its tonight.");
+                    ForegroundColor = ConsoleColor.White;
+                    WriteLine("\n\nPress ENTER to send tweet...");
+                    ReadKey(true);
+                    Clear();
+                    TextAnimationUtils.AnimateTyping("Well... that worked well... the concert sold out!");
+                    WriteLine("\n\nPress ENTER to talk to Nicki...");
+                    ReadKey(true);
+                    Succeed("The concert really sold out that fast? Wow you're good. Great job!");
+                    break;
+                case 2:
+                    Clear();
+                    TextAnimationUtils.AnimateTyping("You start a giveaway...");
+                    WriteLine("\n\nPress any keys to start writing.");
+                    ForegroundColor = ConsoleColor.Cyan;
+                    TextAnimationUtils.UserTypingAnimation("i'm gonna be giving a few signed cd's! make sure you follow and attend the concert tonight to be entered!");
+                    ForegroundColor = ConsoleColor.White;
+                    WriteLine("\n\nPress ENTER to send tweet...");
+                    ReadKey(true);
+                    Clear();
+                    TextAnimationUtils.AnimateTyping("Well... it looks like sales didn't change that much... at least you gave it a try.");
+                    WriteLine("\n\nPress any key to keep working...");
+                    ReadKey(true);
+                    break;
+                case 3:
+                    Clear();
+                    TextAnimationUtils.AnimateTyping("You don't do anything...");
+                    WriteLine("\n\nPress ENTER to talk to Nicki...");
+                    ReadKey(true);
+                    Fail("You're not going to do anything? You gotta get up and do something! Get back to work!", "You're not going to do anything? That's the last strike. Get out of here! You're fired!");
+                    break;
+            }
+           
         }
 
         private void EmailPrompt()
