@@ -36,7 +36,7 @@ namespace AssistantBarb
             WriteLine($"The player's current score is: {Score}.");
             WriteLine($"Did the player take the HOV Lane? {TookHovLane}");
 
-           if (Slot1 != null && Slot2 != null) { WriteLine($"The player currently has: {Slot1.Name} and {Slot2.Name} in their inventory."); }
+            if (Slot1 != null && Slot2 != null) { WriteLine($"The player currently has: {Slot1.Name} and {Slot2.Name} in their inventory."); }
         }
 
         public void PickUpDrink(Item drink)

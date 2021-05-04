@@ -217,7 +217,7 @@ Welcome to the game, Barbz! Where would you like to go?
 
             Clear();
             ForegroundColor = ConsoleColor.Green;
-            TextAnimationUtils.Blink($"{ArtAssets.TextArt}\n*** 1 NEW TEXT MESSAGE ***", 3);
+            TextAnimationUtils.Blink($"{ArtAssets.TextArt}\n   *** 1 NEW TEXT MESSAGE ***", 3);
             ForegroundColor = ConsoleColor.White;
             WriteLine("\n\nPress ENTER to open...");
             ReadKey(true);
@@ -319,7 +319,7 @@ Welcome to the game, Barbz! Where would you like to go?
 
             Clear();
             ForegroundColor = ConsoleColor.Magenta;
-            TextAnimationUtils.AnimateTyping("\"Thank you for going out for me. It's about time for a sound check. Lets go to the concert.\"");
+            TextAnimationUtils.AnimateTyping("\"Thank you for going out for me. It's about time for a sound check. Lets go to the concert!\"");
             ForegroundColor = ConsoleColor.White;
             WriteLine("\n\nPress ENTER to go to the venue with Nicki...");
             ReadKey(true);
