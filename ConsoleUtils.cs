@@ -8,19 +8,6 @@ namespace AssistantBarb
     class ConsoleUtils
     {
 
-        public static bool YesNoPrompt(string question)
-        {
-            WriteLine(question);
-            string response = ReadLine().ToLower().Trim();
-            if (response.StartsWith("y"))
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
 
         public static void Continue()
         {
@@ -33,13 +20,6 @@ namespace AssistantBarb
             WriteLine("\nPress any key to exit...");
             ReadKey(true);
         }
-	
-	    public static void GameTitle(string windowTitle, string headingTitle, ConsoleColor color)
-	    {
-	        Title = windowTitle;
-	        ForegroundColor = color;
-	        WriteLine(headingTitle);
-	    }
 
         public static void SetWinSize(int width, int height)
         {

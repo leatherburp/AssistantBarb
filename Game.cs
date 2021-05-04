@@ -13,10 +13,6 @@ namespace AssistantBarb
         Item PinkWig = new Item("Pink Wig", 2, ArtAssets.BobArt, ConsoleColor.Magenta);
         Item BlackWig = new Item("Black Wig", 1, ArtAssets.BlackWigArt, ConsoleColor.Gray);
         Item BaldCap = new Item("Baldcap", 0, ArtAssets.BaldCapArt, ConsoleColor.DarkYellow);
-        Item BeefPromo = new Item("Beef Promotion", 0, null, ConsoleColor.Red);
-        Item FunnyPromo = new Item("Funny Tweet", 2, null, ConsoleColor.Yellow);
-        Item GiveawayPromo = new Item("Giveaway Promotion", 1, null, ConsoleColor.Cyan);
-        Item NoPromo = new Item("No Promotion", 0, null, ConsoleColor.Blue);
         Player CurrentPlayer = new Player(24, 4);
         Location Starbucks = new Location("Starbucks");
         Location ConStore = new Location("convienence store");
@@ -81,9 +77,6 @@ I am thankful for your response. Working for Nicki is a huge dream of mine. I ca
 Thank you again,
 Jules";
 
-        public Game()
-        {
-        }
 
         public void Run()
         {
@@ -307,7 +300,7 @@ Welcome to the game, Barbz! Where would you like to go?
                 ForegroundColor = ConsoleColor.Magenta;
                 TextAnimationUtils.AnimateTyping("\n\n\"This is cute... Not my color, but I like it. Thank you.\"");
                 ForegroundColor = ConsoleColor.White;
-                WriteLine("Press ENTER to keep working...");
+                WriteLine("\n\nPress ENTER to keep working...");
                 ReadKey(true);
             }
 
