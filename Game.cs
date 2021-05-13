@@ -629,7 +629,7 @@ Welcome to the game, Barbz! Where would you like to go?
         private void LocationPrompt()
         {
             string prompt = "Where are you going to go?";
-            string[] options = { "Starbucks", "Convience Store" };
+            string[] options = { "Starbucks", "Convenience Store" };
             Menu locationPrompt = new Menu(prompt, options);
             int selectedIndex = locationPrompt.Run();
 
