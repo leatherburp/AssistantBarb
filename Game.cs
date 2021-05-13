@@ -13,7 +13,7 @@ namespace AssistantBarb
         Item PinkWig = new Item("Pink Wig", 2, ArtAssets.BobArt, ConsoleColor.Magenta);
         Item BlackWig = new Item("Black Wig", 1, ArtAssets.BlackWigArt, ConsoleColor.Gray);
         Item BaldCap = new Item("Baldcap", 0, ArtAssets.BaldCapArt, ConsoleColor.DarkYellow);
-        Player CurrentPlayer = new Player(24, 4);
+        Player CurrentPlayer = new Player(23, 4);
         Location Starbucks = new Location("Starbucks");
         Location ConStore = new Location("convienence store");
         private World MyWorld;
@@ -474,6 +474,7 @@ Welcome to the game, Barbz! Where would you like to go?
                     } while (keyInfo.Key != ConsoleKey.Enter);
                     Clear();
                     break;
+
                 case 1:
                     Clear();
                     WriteLine("You begin to write:\n\n");
@@ -573,6 +574,7 @@ Welcome to the game, Barbz! Where would you like to go?
             {
                 for (int i = 0; i < 3; i++)
                 {
+                    CursorVisible = false;
                     Clear();
                     BackgroundColor = ConsoleColor.Blue;
                     Clear();
@@ -586,6 +588,7 @@ Welcome to the game, Barbz! Where would you like to go?
                     Clear();
                     WriteLine(" ");
                     Thread.Sleep(250);
+                    CursorVisible = true;
                 }
                 BackgroundColor = ConsoleColor.Black;
                 Clear();
