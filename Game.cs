@@ -80,6 +80,7 @@ Jules";
 
         public void Run()
         {
+            Title = "Assistant Barb";
             BackgroundColor = ConsoleColor.Black;
             ForegroundColor = ConsoleColor.White;
             Clear();
