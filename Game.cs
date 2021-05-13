@@ -393,7 +393,11 @@ Welcome to the game, Barbz! Where would you like to go?
                     TextAnimationUtils.UserTypingAnimation("i cant stand u haters in my mentions any more... u miserable ppl refuse to move on w/ your lives. come to my concert if ur so obsessed w/ me.");
                     ForegroundColor = ConsoleColor.White;
                     WriteLine("\n\nPress ENTER to send tweet...");
-                    ReadKey(true);
+                    ConsoleKeyInfo keyInfo = ReadKey(true);
+                    do
+                    {
+                        keyInfo = ReadKey(true);
+                    } while (keyInfo.Key != ConsoleKey.Enter);
                     Clear();
                     TextAnimationUtils.AnimateTyping("Well... that didnt go to plan... #NickiMinajIsCanceled is the #1 trending hashtag on Twitter. Nicki doesn't seem too happy...");
                     WriteLine("\n\nPress ENTER to talk to her...");
@@ -408,7 +412,11 @@ Welcome to the game, Barbz! Where would you like to go?
                     TextAnimationUtils.UserTypingAnimation("cawling all barbs, cawling all barbs. report to the conference room right now... come to my concert! its tonight.");
                     ForegroundColor = ConsoleColor.White;
                     WriteLine("\n\nPress ENTER to send tweet...");
-                    ReadKey(true);
+                    ConsoleKeyInfo keyInfo2 = ReadKey(true);
+                    do
+                    {
+                        keyInfo2 = ReadKey(true);
+                    } while (keyInfo2.Key != ConsoleKey.Enter);
                     Clear();
                     TextAnimationUtils.AnimateTyping("Well... that worked well... the concert sold out!");
                     WriteLine("\n\nPress ENTER to talk to Nicki...");
@@ -423,7 +431,11 @@ Welcome to the game, Barbz! Where would you like to go?
                     TextAnimationUtils.UserTypingAnimation("i'm gonna be giving a few signed cd's! make sure you follow and attend the concert tonight to be entered!");
                     ForegroundColor = ConsoleColor.White;
                     WriteLine("\n\nPress ENTER to send tweet...");
-                    ReadKey(true);
+                    ConsoleKeyInfo keyInfo3 = ReadKey(true);
+                    do
+                    {
+                        keyInfo3 = ReadKey(true);
+                    } while (keyInfo3.Key != ConsoleKey.Enter);
                     Clear();
                     TextAnimationUtils.AnimateTyping("Well... it looks like sales didn't change that much... at least you gave it a try.");
                     WriteLine("\n\nPress any key to keep working...");
@@ -455,7 +467,11 @@ Welcome to the game, Barbz! Where would you like to go?
                     WriteLine("You begin to write:\n\n");
                     TextAnimationUtils.UserTypingAnimation(AcceptEmail);
                     WriteLine("\n\nPress ENTER to send...");
-                    ReadKey(true);
+                    ConsoleKeyInfo keyInfo = ReadKey(true);
+                    do
+                    {
+                        keyInfo = ReadKey(true);
+                    } while (keyInfo.Key != ConsoleKey.Enter);
                     Clear();
                     break;
                 case 1:
@@ -463,7 +479,11 @@ Welcome to the game, Barbz! Where would you like to go?
                     WriteLine("You begin to write:\n\n");
                     TextAnimationUtils.UserTypingAnimation(DenyEmail);
                     WriteLine("\n\nPress ENTER to send...");
-                    ReadKey();
+                    ConsoleKeyInfo keyInfo2 = ReadKey(true);
+                    do
+                    {
+                        keyInfo2 = ReadKey(true);
+                    } while (keyInfo2.Key != ConsoleKey.Enter);
                     Clear();
                     ForegroundColor = ConsoleColor.Red;
                     TextAnimationUtils.AnimateTyping("And just like that you career is over before it began. Nicki doesn't even know you exist! That was a stupid decision.");
