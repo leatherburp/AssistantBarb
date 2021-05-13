@@ -366,6 +366,11 @@ Welcome to the game, Barbz! Where would you like to go?
             WriteLine("ASCII Art From:");
             WriteLine("\tPr59 - https://ascii.co.uk/art/envelope");
             WriteLine("\tJoan Stark - https://www.asciiart.eu/vehicles/airplanes");
+            ForegroundColor = ConsoleColor.Magenta;
+            WriteLine("\n\n\t\t------------------------------------------------");
+            WriteLine("\n\tA special thanks to all of the barbz that helped me make this! <3");
+            WriteLine("\n\t\t------------------------------------------------");
+            ForegroundColor = ConsoleColor.White;
             ConsoleUtils.Continue();
             RunMainMenu();
         }
